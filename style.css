@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.title-section{
+height: 4%;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #217346;
+outline: none;
+color: white;
+}
+.menu-bar-section{
+    height: 4%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    outline: none;
+    background-color: white;
+}
+.menu-bar-section div{
+    margin-left: 20px;
+    
+}
+.formula-section{
+    display: flex;
+    height: 4%;
+    width: 100%;
+}
+.menu-options{
+    height: 8%;
+    width: 100%;
+    background-color: #217346;
+
+}
+.selected-cell{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.formula-input{
+    height: 100%;
+    width:80%;
+    border: none;
+    outline: none;
+}
+
+.grid{
+    height: 76%;
+    width: 100vw;
+    position: relative;
+    overflow: auto;
+}
+.blank-corner{
+    position: fixed;
+    top: 20vh;
+    z-index: 1;
+    height: 30px;
+    width:30px;
+    background-color: #b4b4b4;
+}
+.sheet-section{
+    height: 4%;
+    width: 100vw;
+    background-color: #217346;
+}
+.row-container{
+height: 100%;
+width: 30px;
+display: inline-block;
+position: fixed;
+top: calc(20vh + 30px);
+z-index: -1;
+}
+.row-number{
+    height: 30px;
+    width: 30px;
+    border: solid #aeaeae;
+    border-width: 1px 1px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+}
+.column-container{
+    position: fixed;
+    height: 30px;
+    top: 20vh;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+}
+.column{
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #e6e6e6;
+    border: solid #aeaeae;
+    border-width: 0px 0px 1px 1px;
+}
+.cell-section{
+    height: calc(76vh - 30px);
+    width: calc(100vw - 30px);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    overflow: auto;
+}
+.row{
+    display: flex;
+}
+.cell{
+    height: 30px;
+    width: 80px;
+    flex-shrink: 0;
+    outline: none; 
+    color: black;
+    border: 1px solid #e4e4e4;
+}
+
+.cell-selected{
+    border: 2px solid #217346;
+}
