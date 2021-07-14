@@ -36,11 +36,21 @@ for(let i=1;i<=100;i++){
         let cell=document.createElement("div");
         cell.classList.add("cell");
         cell.setAttribute("data-address",cellAdress);
-        dataObj[cellAdress]={};
-        dataObj[cellAdress]["value"]=undefined;
-        dataObj[cellAdress]["downStream"]=[];
-        dataObj[cellAdress]["upStream"]=[];
-        cell.contentEditable="true"
+        dataObj[cellAdress]={value:undefined,
+            formula:undefined,
+            downStream:[],
+            upStream:[]
+};
+        // dataObj[cellAdress]["value"]=undefined;
+        // dataObj[cellAdress]["downStream"]=[];
+        // dataObj[cellAdress]["upStream"]=[];
+        cell.addEventListener("input",(e)=>{
+            let currCellAddress=e.currentTarget.getAttribute("data-address");
+            let currCellObj=dataObj[currCellAddress];
+            currCellObj.value = e.currentTarget.innerText;
+            console.log(currCellObj);
+        })
+        cell.contentEditable="true";
         row.append(cell);
 //attaching event listner to every cell
         cell.addEventListener("click",(e)=>{   //remove lastSelected cell border and add border to newly selected cell
