@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    border-collapse: collapse;
 }
 body{
     margin: 0;
@@ -19,6 +20,7 @@ align-items: center;
 background-color: #217346;
 outline: none;
 color: white;
+
 }
 .menu-bar-section{
     height: 4%;
@@ -40,8 +42,10 @@ color: white;
 .menu-options{
     height: 8%;
     width: 100%;
-    background-color: #217346;
-
+    background-color: white;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    display: flex;
 }
 .selected-cell{
     height: 100%;
@@ -56,6 +60,8 @@ color: white;
     width:80%;
     border: none;
     outline: none;
+    background-color: white;
+    border-left: 1px solid #b4b4b4;
 }
 
 .grid{
@@ -70,8 +76,9 @@ color: white;
     z-index: 1;
     height: 30px;
     width:30px;
-    background-color: #b4b4b4;
+    background-color: #cecdcd;
 }
+
 .sheet-section{
     height: 4%;
     width: 100vw;
@@ -115,7 +122,8 @@ z-index: -1;
     flex-shrink: 0;
     background-color: #e6e6e6;
     border: solid #aeaeae;
-    border-width: 0px 0px 1px 1px;
+    border-width: 0px 0px 2px 2px;
+    
 }
 .cell-section{
     height: calc(76vh - 30px);
@@ -129,14 +137,71 @@ z-index: -1;
     display: flex;
 }
 .cell{
+    display: flex;
     height: 30px;
     width: 80px;
     flex-shrink: 0;
     outline: none; 
     color: black;
-    border: 1px solid #e4e4e4;
+    border: 1px solid #bfbdbd78;
 }
 
 .cell-selected{
     border: 2px solid #217346;
+}
+#font-size{
+    height: 100%;
+    width: 100%;
+}
+.box-type1{
+    width:20vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box-type2{
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.option{
+    height: 60%;
+    width: 5vw;
+}
+.font-family{
+    height: 3vh;
+    width: 70%;
+}
+.font-size{
+width: 15%;
+height: 3vh;
+}
+#font-family{
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+#file{
+    position: relative;
+}
+#file>div{
+    border: 1px solid #217346;
+    height: 6rem;
+    width: 4rem;
+    position: absolute;
+background-color: rgb(228, 228, 228);
+text-align: center;
+}
+.file-options:hover{
+    background-color: #217346;
+    color: white;
+}
+
+.colorPicker{
+    position: fixed;
+    top:0;
 }

@@ -1,32 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-<div class="container">
-    <div class="title-section" contenteditable="true">Title</div>
-    <div class="menu-bar-section">
-        <div>File</div>
-        <div>Help</div>
+    <div class="container">
+        <div class="title-section" contenteditable="true">Title</div>
+        <div class="menu-bar-section">
+            <div id = "file" file-option-open = "false">File</div>
+            <div id = "help">Help</div>
+        </div>
+        <div class="menu-options">
+            <div class="font-style box-type1">
+                <div class="bold option">
+                    <span class="material-icons">
+                        format_bold
+                    </span>
+                </div>
+                <div class="italic option"><span class="material-icons">
+                        format_italic
+                    </span></div>
+                <div class="underline option">
+                    <span class="material-icons">
+                        format_underlined
+                    </span>
+                </div>
+            </div>
+            <div class="font-type box-type2">
+                <div class="font-family option">
+                    <select name="font-family" id="font-family">
+                        <option value="Arial, sans-serif">Arial, sans-serif</option>
+                        <option value="Courier New, monospace">Courier New, monospace</option>
+                        <option value="Impact, fantasy">Impact, fantasy</option>
+                        <option value="Comic Sans MS, Comic Sans, cursive">Comic Sans MS, Comic Sans, cursive</option>
+                    </select>
+                </div>
+                <div class="font-size option">
+                    <select name="font-size" id="font-size">
+                        <option value="1.2rem">10</option>
+                        <option value="1.3rem">12</option>
+                        <option value="1.5rem">14</option>
+                        <option value="1.7rem">16</option>
+                    </select>
+                </div>
+            </div>
+            <div class="line-setting box-type1">
+                <div class="line-left option"><span class="material-icons">
+                        format_align_left
+                    </span></div>
+                <div class="line-centre option"><span class="material-icons">
+                        format_align_center
+                    </span></div>
+                <div class="line-right option"><span class="material-icons">
+                        format_align_right
+                    </span></div>
+            </div>
+            <div class="text-setting box-type1">
+                <div class="bgclr option">
+                    <span class="material-icons"> format_color_fill </span>
+                </div>
+                <div class="text-color option">
+                    <span class="material-icons"> format_color_text </span>
+                </div>
+            </div>
+        </div>
+        <div class="formula-section">
+            <div class="selected-cell"></div>
+            <input type="text" class="formula-input"/>
+        </div>
+        <div class="grid">
+            <div class="blank-corner">
+            </div>
+            <div class="row-container"></div>
+            <div class="column-container"></div>
+            <div class="cell-section"></div>
+        </div>
+        <div class="sheet-section"></div>
     </div>
-    <div class="menu-options"></div>
-    <div class="formula-section">
-        <div class="selected-cell"></div>
-        <div class="formula-input" contenteditable="true"></div>
-    </div>
-    <div class="grid">
-        <div class="blank-corner"></div>
-        <div class="row-container"></div>
-        <div class="column-container"></div>
-        <div class="cell-section"></div>
-    </div>
-    <div class="sheet-section"></div>
-</div>    
 </body>
 <script src="script.js"></script>
+<script src="UiCreation.js"></script>
+<script src="value.js"></script>
+<script src="formula.js"></script>
+<script src="styleScript.js"></script>
 </html>
