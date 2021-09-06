@@ -180,8 +180,15 @@ z-index: -1;
     justify-content: space-around;
 }
 .option{
-    height: 60%;
-    width: 5vw;
+    height: 50%;
+    width: 2vw;
+    /* border: 1px solid; */
+    text-align: center;
+}
+.option>span{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
 .font-family{
     height: 3vh;
@@ -225,4 +232,17 @@ text-align: center;
 }
 [text-decoration="underline"]{
     text-decoration: underline;
+}
+[text-align = "left"]{
+    justify-content: end;
+}
+
+[text-align = "center"]{
+    justify-content: center;
+}
+[text-align = "right"]{
+    justify-content: flex-end;
+}
+.selected-align{
+    background-color: #cecdcd;
 }

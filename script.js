@@ -3,9 +3,10 @@ let columnContainer = document.querySelector(".column-container");
 let cellSection = document.querySelector(".cell-section");
 let selectedCell = document.querySelector(".selected-cell");
 let formulaDiv = document.querySelector(".formula-input");
-
+// dataObj container all the meta-information about a cell
 let dataObj = {};
 let lastCell = undefined; // this variable will always container last used/selected cell ELEMENT
+let lastSelectedAlignOption = undefined;
 
 
 
@@ -57,5 +58,6 @@ function notifyParentCells(cell) {
         notifyParentCells(downStream[i]);
     }
 }
+
 
 
