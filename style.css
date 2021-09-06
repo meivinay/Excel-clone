@@ -145,9 +145,20 @@ z-index: -1;
     color: black;
     border: 1px solid #bfbdbd78;
 }
-
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.underline{
+    text-decoration: underline;
+}
 .cell-selected{
     border: 2px solid #217346;
+}
+.option{
+    cursor: pointer;
 }
 #font-size{
     height: 100%;
@@ -204,4 +215,14 @@ text-align: center;
 .colorPicker{
     position: fixed;
     top:0;
+}
+
+[font-weight='bold']{
+    font-weight: bold;
+}
+[font-style="italic"]{
+    font-style: italic;
+}
+[text-decoration="underline"]{
+    text-decoration: underline;
 }

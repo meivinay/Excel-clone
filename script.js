@@ -16,8 +16,7 @@ function removeFromParentDownStream(parentCell, childCell) {
     //parentCell is cell-address in which upstream i am present
     //childCell is cell-address which is present in upstream of parentCell
     // fetching downstream of connected cell
-    console.log("#####");
-    console.log(parentCell);
+    
     let parentDownStream = dataObj[parentCell].downStream;
     // removing only my self from downstream of connected cell
     let filterDownStream = [];
